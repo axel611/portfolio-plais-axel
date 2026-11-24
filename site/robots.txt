@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://SITE-A-REMPLACER.netlify.app/sitemap.xml

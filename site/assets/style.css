@@ -1,0 +1,313 @@
+/* ===== Polices hébergées sur le site (WOFF2, caractères latins) ===== */
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/inter-latin-300-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/inter-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/inter-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/inter-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/instrument-serif-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap; src: url('fonts/instrument-serif-latin-400-italic.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2'); }
+
+/* ===== Couleurs de référence (une seule source pour le vert foncé) ===== */
+:root {
+    --accent: #1F5C3A;
+    --paper: #F3EEE6;
+    --ink: #2B2722;
+    color-scheme: light;
+}
+
+body {
+    font-size-adjust: from-font;
+    background-color: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+}
+@media (max-width: 767px) {
+    html, body { overflow-x: clip; }
+    body { -webkit-tap-highlight-color: transparent; }
+    body.menu-open { overflow: clip; }
+}
+
+/* Surlignage : <mark class="hl">mot</mark> (vert foncé) ou <mark class="hl hl-sage">mot</mark> (sauge) */
+.hl {
+    background: var(--accent);
+    color: var(--paper);
+    padding: 0 .3em;
+    font-weight: 500;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+.hl-sage { background: #5E6E54; }
+
+/* Emplacements d'images */
+.img-placeholder {
+    background: linear-gradient(45deg, #E9E2D6 25%, #E4DCCF 25%, #E4DCCF 50%, #E9E2D6 50%, #E9E2D6 75%, #E4DCCF 75%, #E4DCCF 100%);
+    background-size: 20px 20px;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 1rem;
+    color: #6B6357; font-size: 13px;
+    transition: filter 0.5s ease;
+}
+.group:hover .img-placeholder { filter: brightness(0.97); }
+
+/* ===== Méhari Club Cassis ===== */
+/* Photos : couleur désaturée. Pour du noir & blanc : filter: grayscale(1) contrast(1.05); */
+.mcc-photo {
+    filter: saturate(.7) contrast(.96) sepia(.06);
+    transition: filter .5s ease;
+}
+.mcc-photo:hover, .group:hover .mcc-photo { filter: none; }
+.mcc-cutout { mix-blend-mode: multiply; }
+
+.lot-bar {
+    display: block; height: 10px;
+    width: calc(var(--n) * 12px);
+    background: repeating-linear-gradient(90deg, #E8B931 0 8px, transparent 8px 12px);
+}
+
+/* Lien « Découvrir » : la flèche avance au survol */
+.go-arrow { display: inline-block; transition: transform .3s ease; }
+a:hover .go-arrow, .group:hover .go-arrow { transform: translateX(4px); }
+
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ===== Pied de page « encre » (palette C) ===== */
+footer#contact a:focus-visible { outline-color: #7FBF98; }
+
+/* ===== Page MCC : nomenclature + schéma de la ligne (nov. 2026) ===== */
+.mcc-bloc { margin-top: 4rem; }
+@media (min-width: 1024px) {
+    .mcc-bloc { margin-top: 6rem; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 3rem; }
+    .mcc-bloc > .mcc-side { grid-column: span 3; align-self: start; }
+    .mcc-bloc > :not(.mcc-side) { grid-column: span 9; }
+}
+.mcc-label {
+    display: flex; align-items: center; gap: .75rem; margin: 0 0 1rem;
+    font-size: 13px; font-weight: 400; color: #8A8174;
+}
+.mcc-tick { width: 1rem; height: 2px; background: #E8B931; }
+
+/* Nomenclature : 4 repères identiques, alignés */
+.mcc-nomen { border: 1px solid rgba(138,129,116,.6); }
+.mcc-nomen-head {
+    display: flex; justify-content: space-between; padding: .6rem .9rem;
+    border-bottom: 1px solid rgba(138,129,116,.6);
+    font-size: 13px; color: #8A8174;
+}
+.mcc-nomen-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 768px) { .mcc-nomen-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.mcc-nomen-cell {
+    display: flex; flex-direction: column; padding: 1rem .9rem 1.1rem;
+    border-right: 1px solid rgba(138,129,116,.3); border-bottom: 1px solid rgba(138,129,116,.3);
+}
+.mcc-nomen-cell:nth-child(2n) { border-right: 0; }
+.mcc-nomen-cell:nth-child(n+3) { border-bottom: 0; }
+@media (min-width: 768px) {
+    .mcc-nomen-cell { border-bottom: 0; border-right: 1px solid rgba(138,129,116,.3); }
+    .mcc-nomen-cell:nth-child(2n) { border-right: 1px solid rgba(138,129,116,.3); }
+    .mcc-nomen-cell:last-child { border-right: 0; }
+}
+.mcc-rep { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .1em; color: var(--accent); }
+.mcc-qte { margin-top: .5rem; font-family: 'Instrument Serif', serif; font-style: italic; font-size: 3.25rem; line-height: 1; color: var(--ink); }
+.mcc-desig { margin-top: .6rem; font-size: .9rem; font-weight: 500; line-height: 1.25; color: var(--ink); }
+.mcc-obs {
+    margin-top: auto; padding-top: .9rem;
+    font-size: 13px; line-height: 1.5; color: #8A8174;
+}
+
+/* Schéma de la ligne */
+.mcc-flux { margin: 0; }
+.mcc-flux svg { display: block; width: 100%; height: auto; }
+.mcc-flux .mcc-flux-v { display: none; }
+@media (max-width: 767px) { .mcc-flux .mcc-flux-h { display: none; } .mcc-flux .mcc-flux-v { display: block; max-width: 420px; } }
+.mcc-flux .t-mono { font-family: Inter, sans-serif; font-size: 12.5px; font-weight: 500; letter-spacing: 0; }
+.mcc-flux .t-sans { font-family: Inter, sans-serif; font-size: 13px; font-weight: 300; fill: #4A443C; }
+.mcc-flux .t-title { font-family: Inter, sans-serif; font-size: 16px; font-weight: 500; fill: var(--ink); }
+.mcc-flux .t-blue { fill: #24508F; }
+.mcc-flux .t-grey { fill: #8A8174; }
+.mcc-flux .t-accent { fill: var(--accent); }
+.mcc-flux .t-ink { fill: var(--ink); }
+.mcc-flux .t-paper { fill: var(--paper); }
+.mcc-cap {
+    margin-top: .75rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem;
+    font-size: 13px; color: #8A8174;
+}
+
+/* Colonne de gauche des blocs MCC */
+.mcc-side { margin-bottom: 1.5rem; }
+.mcc-side-title { margin: 1.25rem 0 0; font-family: 'Instrument Serif', serif; font-style: italic; font-size: 2.5rem; line-height: 1; color: var(--ink); }
+.mcc-side-text { margin: 1rem 0 0; font-size: .9rem; font-weight: 300; line-height: 1.6; color: #6B6357; max-width: 32rem; }
+@media (min-width: 1024px) { .mcc-side { margin-bottom: 0; } }
+
+
+/* ===== Passe de finition Hallmark (nov. 2026) ===== */
+/* Boutons : états appuyé et désactivé */
+a[class*="border-ink"]:active { transform: translateY(1px); }
+/* Respect du réglage « réduire les animations » */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
+/* ===== Modern Web Guidance (nov. 2026) ===== */
+/* Les <picture> ne changent pas la mise en page : l'image garde ses classes */
+picture { display: contents; }
+
+/* Lien d'évitement, visible seulement au clavier */
+.skip-link {
+    position: fixed; top: .75rem; left: .75rem; z-index: 100;
+    padding: .6rem 1rem; background: var(--ink); color: var(--paper);
+    font-size: 14px; border-radius: 2px;
+    transform: translateY(-200%); transition: transform .2s ease;
+}
+.skip-link:focus { transform: none; outline: 2px solid var(--accent); outline-offset: 2px; }
+main:focus { outline: none; }
+
+/* Rubrique en cours dans le menu : souligné, pas seulement la couleur */
+nav a[aria-current] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 6px; }
+
+/* Retours à la ligne : titres équilibrés, paragraphes sans mot orphelin */
+h1, h2, h3 { text-wrap: balance; }
+p, li, blockquote { text-wrap: pretty; }
+.hl { text-wrap: wrap; }
+
+/* Transition douce entre les pages (Chrome, Edge, Safari ; ailleurs navigation normale) */
+@media (prefers-reduced-motion: no-preference) {
+    @view-transition { navigation: auto; }
+}
+
+/* ===== Fond quadrillé type plan + accent vert foncé (24/11/2026) ===== */
+/* Petit carreau de 24 px et grand carreau de 120 px, comme une feuille de plan */
+body {
+    background-image:
+        linear-gradient(rgba(43,39,34,.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(43,39,34,.075) 1px, transparent 1px),
+        linear-gradient(rgba(43,39,34,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(43,39,34,.035) 1px, transparent 1px);
+    background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+    background-position: -1px -1px;
+}
+footer#contact {
+    background-image:
+        linear-gradient(rgba(243,238,230,.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(243,238,230,.07) 1px, transparent 1px),
+        linear-gradient(rgba(243,238,230,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(243,238,230,.03) 1px, transparent 1px);
+    background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+    background-position: -1px -1px;
+}
+
+/* ===== Accueil 24/11 : frise du parcours ===== */
+.frise { list-style: none; margin: 0; padding: 0; position: relative; }
+.etape { display: grid; grid-template-columns: 1fr; gap: .75rem; padding: 0 0 3rem 1.75rem; position: relative; border-left: 1px solid var(--ink); }
+.etape::before { content: ""; position: absolute; left: -5px; top: .45rem; width: 9px; height: 9px; background: var(--paper); border: 1px solid var(--ink); }
+.etape--forte::before { background: var(--accent); border-color: var(--accent); }
+.etape:last-child { padding-bottom: 0; }
+.etape-quand { display: flex; flex-direction: column; gap: .15rem; }
+@media (min-width: 768px) {
+    .etape { grid-template-columns: 170px minmax(0, 1fr); gap: 2.5rem; border-left: 0; padding: 0 0 4rem; }
+    .etape::before { left: 165px; }
+    .etape-corps { border-left: 1px solid var(--ink); padding-left: 2.5rem; margin-left: -2.5rem; }
+    .etape:not(:last-child) .etape-corps { padding-bottom: 4rem; margin-bottom: -4rem; }
+    .etape-quand { text-align: right; padding-right: 1.75rem; }
+}
+.taches li { position: relative; padding-left: 1.1rem; }
+.taches li::before { content: ""; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; background: var(--accent); }
+
+/* ===== Animations et interactions (24/11/2026) — le JS est dans assets/animations.js ===== */
+/* Barre de progression de lecture */
+#scroll-progress { position: fixed; top: 0; left: 0; z-index: 70; width: 100%; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: 0 50%; pointer-events: none; }
+
+/* En-tête fixe, plus compact après 40 px de défilement */
+#site-header { transition: padding .35s ease; border-bottom: 1px solid transparent; }
+#site-header.is-scrolled { padding-top: .9rem; padding-bottom: .9rem; }
+html { scroll-padding-top: 5.5rem; }
+
+/* Pastille pulsante à côté de « Portfolio 2026 » */
+.pulse-dot { position: relative; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.pulse-dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--accent); opacity: .5; }
+
+/* Sommaire : ligne qui se dessine + flèche ↗ */
+.sommaire-link { position: relative; }
+.sommaire-link::before { content: ""; position: absolute; left: 0; right: 0; top: -2px; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: 0 50%; transition: transform .5s cubic-bezier(.16, 1, .3, 1); }
+.sommaire-link:hover::before, .sommaire-link:focus-visible::before { transform: scaleX(1); }
+.sommaire-arrow { float: right; color: var(--accent); opacity: 0; transform: translate(-6px, 6px); transition: opacity .35s ease, transform .35s cubic-bezier(.16, 1, .3, 1); }
+.sommaire-link:hover .sommaire-arrow, .sommaire-link:focus-visible .sommaire-arrow { opacity: 1; transform: none; }
+
+/* Boutons, cartes, visuels */
+.btn-modern { transition: transform .3s cubic-bezier(.16, 1, .3, 1), box-shadow .3s ease, background-color .3s ease, color .3s ease; }
+.btn-modern:hover { transform: translateY(-2px); box-shadow: 0 8px 20px -10px rgba(43, 39, 34, .45); }
+.btn-arrow { display: inline-block; transition: transform .3s cubic-bezier(.16, 1, .3, 1); }
+.btn-modern:hover .btn-arrow { transform: translateX(4px); }
+.card-lift { transition: transform .35s cubic-bezier(.16, 1, .3, 1), box-shadow .35s ease, border-color .3s ease; }
+.card-lift:hover { transform: translateY(-3px); box-shadow: 0 10px 24px -14px rgba(43, 39, 34, .4); }
+.photo-frame img, .photo-zoom img { transition: transform 1.2s cubic-bezier(.16, 1, .3, 1), filter .5s ease; }
+.photo-frame:hover img, .photo-zoom:hover img, a:hover .photo-zoom img { transform: scale(1.04); }
+
+/* Frise : la ligne se remplit en vert au fil du défilement */
+.frise-fill { position: absolute; left: -1px; top: 0; width: 2px; height: 100%; background: var(--accent); transform: scaleY(0); transform-origin: 50% 0; pointer-events: none; z-index: 1; }
+@media (min-width: 768px) { .frise-fill { left: 169px; } }
+.etape::before { z-index: 2; }
+
+/* Bouton « Copier » */
+.copy-mail.is-done { color: #7FBF98; border-color: #7FBF98; }
+
+/* Visionneuse de photos et aperçu du CV */
+.lb-dialog { padding: 0; border: 0; background: transparent; max-width: min(92vw, 1200px); max-height: 92vh; overflow: visible; }
+.lb-dialog::backdrop { background: rgba(23, 21, 18, .86); }
+.lb-dialog img { display: block; max-width: 100%; max-height: 80vh; margin: 0 auto; background: var(--paper); }
+.lb-dialog figcaption { margin-top: .75rem; color: var(--paper); font-family: 'JetBrains Mono', monospace; font-size: 12px; text-align: center; }
+.lb-close { position: absolute; top: -2.5rem; right: 0; color: var(--paper); font-size: 14px; background: none; border: 1px solid rgba(243, 238, 230, .5); padding: .3rem .7rem; cursor: pointer; }
+.lb-zoomable { cursor: zoom-in; }
+.cv-dialog { width: min(92vw, 900px); height: 88vh; max-width: none; max-height: none; }
+.cv-dialog iframe { width: 100%; height: 100%; border: 0; background: #fff; }
+
+/* Menu mobile : liens en cascade */
+#mobile-menu a { transition: opacity .4s ease, transform .5s cubic-bezier(.16, 1, .3, 1); }
+#mobile-menu.opacity-0 a { opacity: 0; transform: translateY(12px); }
+#menu-btn[aria-expanded="true"] span:first-child { transform: translateY(3.25px) rotate(45deg); }
+#menu-btn[aria-expanded="true"] span:last-child { transform: translateY(-3.25px) rotate(-45deg); }
+#mobile-menu a:nth-child(2) { transition-delay: .05s; } #mobile-menu a:nth-child(3) { transition-delay: .1s; }
+#mobile-menu a:nth-child(4) { transition-delay: .15s; } #mobile-menu a:nth-child(5) { transition-delay: .2s; }
+
+/* Apparitions au scroll : seulement si le JS tourne et si les animations ne sont pas réduites */
+@media (prefers-reduced-motion: no-preference) {
+    .js-enabled [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.16, 1, .3, 1), transform .9s cubic-bezier(.16, 1, .3, 1); transition-delay: var(--reveal-delay, 0ms); }
+    .js-enabled [data-reveal="left"] { transform: translateX(-28px); }
+    .js-enabled [data-reveal="scale"] { transform: scale(.96); }
+    .js-enabled [data-reveal].is-visible { opacity: 1; transform: none; }
+    .pulse-dot::after { animation: pulse 2.4s ease-out infinite; }
+    @keyframes pulse { 0% { transform: scale(1); opacity: .5; } 80%, 100% { transform: scale(2.8); opacity: 0; } }
+}
+
+/* ===== Aperçu 24/11 : menu pilule, titre flou =====
+ */
+/* 1. Menu en pilule flottante */
+.header-id, .header-cv { transition: opacity .35s ease, transform .35s ease; }
+#site-header.is-scrolled .header-id { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+.nav-pill { position: absolute; left: 50%; transform: translateX(-50%); gap: 2px; padding: 6px; border: 1px solid rgba(43,39,34,.14); border-radius: 999px; background: rgba(243,238,230,.72); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); transition: padding .35s ease, box-shadow .35s ease, background-color .35s ease; }
+#site-header.is-scrolled .nav-pill { padding: 4px; background: rgba(243,238,230,.88); box-shadow: 0 10px 30px -10px rgba(43,39,34,.25); }
+#site-header.is-scrolled .header-cv { background: rgba(243,238,230,.88); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+.nav-pill .nav-link { position: relative; z-index: 1; padding: .5rem 1.1rem; border-radius: 999px; transition: color .3s ease; }
+.nav-pill .nav-link:hover, .nav-pill .nav-link.is-hot { color: var(--accent); }
+.nav-pill .nav-link.is-active { color: var(--paper); transition: color .25s ease .2s; }
+/* Pastille verte : reste sur la section active, glisse lentement vers le lien cliqué */
+.nav-indicator { position: absolute; z-index: 0; top: 6px; bottom: 6px; left: 0; width: 0; border-radius: 999px; background: var(--accent); opacity: 0; transition: opacity .3s ease, top .35s ease, bottom .35s ease; }
+/* Contour de « présélection » autour du lien survolé */
+.nav-hover { position: absolute; z-index: 0; top: 6px; bottom: 6px; left: 0; width: 0; border-radius: 999px; border: 1px solid rgba(31,92,58,.55); background: rgba(31,92,58,.07); opacity: 0; transform: scale(.82); pointer-events: none; transition: opacity .25s ease, transform .35s cubic-bezier(.34,1.56,.64,1), top .35s ease, bottom .35s ease; }
+.nav-hover.is-on { opacity: 1; transform: scale(1); }
+#site-header.is-scrolled :is(.nav-hover, .nav-indicator) { top: 4px; bottom: 4px; }
+
+/* 2. Titre qui apparaît mot par mot, avec un flou qui se dissipe */
+.blur-word { display: inline-block; }
+.rotator { position: relative; display: inline-grid; color: var(--accent); font-weight: 500; }
+.rotator > span { grid-area: 1 / 1; white-space: nowrap; transition: opacity .5s ease, transform .6s cubic-bezier(.16,1,.3,1), filter .5s ease; }
+.rotator > span:not(.is-on) { opacity: 0; transform: translateY(70%); filter: blur(6px); }
+.rotator > span.is-out { opacity: 0; transform: translateY(-70%); filter: blur(6px); }
+@media (prefers-reduced-motion: no-preference) {
+    .js-enabled .blur-word, .js-enabled .blur-words .bw { opacity: 0; filter: blur(14px); transform: translateY(18%); animation: blur-in 1s cubic-bezier(.16,1,.3,1) forwards; animation-delay: calc(.15s + var(--i, 0) * .14s); }
+    .js-enabled .blur-words .bw { display: inline-block; animation-duration: .8s; animation-delay: calc(.55s + var(--i, 0) * .045s); }
+    .js-enabled .blur-late { opacity: 0; animation: blur-in .8s ease forwards 1.15s; }
+    @keyframes blur-in { to { opacity: 1; filter: blur(0); transform: none; } }
+}
+
+

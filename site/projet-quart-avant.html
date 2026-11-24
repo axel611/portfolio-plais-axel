@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quart avant de véhicule, Axel Plais</title>
+    <meta name="description" content="Projet de conception d’un quart avant de véhicule sous 3DExperience, mené par Axel Plais en 3e année à l’ESTACA.">
+    <link rel="canonical" href="https://SITE-A-REMPLACER.netlify.app/projet-quart-avant.html">
+    <meta name="theme-color" content="#F3EEE6">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Axel Plais, portfolio">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Quart avant de véhicule, Axel Plais">
+    <meta property="og:description" content="Projet de conception d’un quart avant de véhicule sous 3DExperience, mené par Axel Plais en 3e année à l’ESTACA.">
+    <meta property="og:url" content="https://SITE-A-REMPLACER.netlify.app/projet-quart-avant.html">
+    <meta property="og:image" content="https://SITE-A-REMPLACER.netlify.app/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Axel Plais, élève-ingénieur automobile à l’ESTACA">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preload" href="assets/fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/tailwind.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <script>document.documentElement.classList.add('js-enabled')</script>
+</head>
+<body class="selection:bg-accent selection:text-paper">
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <a href="#contenu" class="skip-link">Aller au contenu</a>
+
+    <!-- EN-TÊTE -->
+    <header id="site-header" class="fixed top-0 w-full z-40 py-6 md:py-8 px-5 md:px-12 flex justify-between items-center">
+        <a href="index.html" class="header-id block">
+            <div class="text-base font-semibold mb-1">Axel Plais</div>
+            <div class="text-xs text-neutral-500 pr-14 md:pr-0">3<sup>e</sup> année ESTACA, filière automobile</div>
+        </a>
+        <nav aria-label="Navigation principale" class="nav-pill hidden md:flex text-xs text-neutral-400">
+            <span class="nav-indicator" aria-hidden="true"></span>
+            <a href="index.html#accueil" class="nav-link">Accueil</a>
+            <a href="index.html#about" class="nav-link">Profil</a>
+            <a href="index.html#experiences" aria-current="true" class="nav-link is-active">Parcours</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <a href="pdf/CV_Axel_PLAIS.pdf" target="_blank" rel="noopener" class="header-cv hidden md:inline-flex items-center gap-2 text-xs text-ink border border-ink/70 rounded-full px-4 py-2 hover:bg-ink hover:text-paper transition-colors">CV <span aria-hidden="true">↓</span><span class="sr-only"> (PDF, nouvel onglet)</span></a>
+    </header>
+
+    <!-- MENU MOBILE -->
+    <button id="menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden fixed top-5 right-5 z-[60] w-11 h-11 rounded-full bg-ink text-paper flex flex-col items-center justify-center gap-[5px] shadow-md">
+        <span class="block w-5 h-[1.5px] bg-paper transition"></span>
+        <span class="block w-5 h-[1.5px] bg-paper transition"></span>
+    </button>
+    <nav id="mobile-menu" aria-label="Menu mobile" inert class="md:hidden fixed inset-0 z-50 bg-paper px-6 pt-28 pb-10 flex flex-col opacity-0 pointer-events-none transition-opacity duration-300">
+        <a href="index.html#accueil" class="flex items-baseline gap-4 py-4 border-b border-neutral-800"><span class="font-mono text-xs text-accent w-8">00</span><span class="font-serif italic text-4xl text-ink">Accueil</span></a>
+        <a href="index.html#about" class="flex items-baseline gap-4 py-4 border-b border-neutral-800"><span class="font-mono text-xs text-accent w-8">01</span><span class="font-serif italic text-4xl text-ink">Profil</span></a>
+        <a href="index.html#experiences" aria-current="true" class="flex items-baseline gap-4 py-4 border-b border-neutral-800"><span class="font-mono text-xs text-accent w-8">02</span><span class="font-serif italic text-4xl text-ink">Parcours</span></a>
+        <a href="#contact" class="flex items-baseline gap-4 py-4 border-b border-neutral-800"><span class="font-mono text-xs text-accent w-8">03</span><span class="font-serif italic text-4xl text-ink">Contact</span></a>
+        <p class="mt-auto text-xs text-neutral-500">Axel Plais, portfolio 2026</p>
+    </nav>
+
+    <main id="contenu" tabindex="-1" class="px-5 md:px-12 pt-32 md:pt-40 pb-16 md:pb-24">
+        <div class="page-wrap">
+
+            <a href="index.html#experiences" class="inline-flex items-center gap-3 text-xs text-neutral-500 hover:text-accent transition">Retour aux expériences</a>
+
+            <!-- Barre de titre -->
+            <div class="mt-8 flex items-center justify-between gap-4 text-xs text-neutral-400">
+                <div class="flex items-center gap-3 md:gap-4 min-w-0">
+                    <span class="hidden sm:inline">Portfolio 2026</span>
+                    <span class="hidden sm:inline w-[2px] h-4 bg-sage"></span>
+                    <span>Expériences</span>
+                    <span class="w-[2px] h-4 bg-sage shrink-0"></span>
+                    <span class="text-ink truncate">Quart avant de véhicule</span>
+                </div>
+                <span class="font-mono bg-accent text-paper px-3 py-1.5 whitespace-nowrap">02.4</span>
+            </div>
+            <!-- 02.4 · Quart avant de véhicule -->
+            <article id="exp-quart-avant" class="mt-10 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-12 py-10 md:py-16 border-t border-neutral-800">
+                <div class="lg:col-span-3 text-xs text-neutral-500 space-y-1 md:space-y-2">
+                    <div class="text-accent text-sm">02.4</div>
+                    <div class="text-ink">Projet CAO, 3<sup>e</sup> année</div>
+                    <div>2026</div>
+                    <div>3DExperience</div>
+                </div>
+                <div class="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    <div>
+                        <h1 class="font-serif italic text-4xl md:text-6xl text-ink leading-tight mb-4 md:mb-6">Quart avant de véhicule</h1>
+                        <p class="text-neutral-400 font-light leading-relaxed mb-6">[Courte intro : objectif du projet et ta part. Ex : modélisation complète d'un quart avant, triangles, suspension, jante et freinage, avec la conception du bol de disque.]</p>
+                        <ul class="space-y-2 text-sm text-neutral-400 font-light">
+                            <li class="flex gap-3"><span class="text-accent mt-[2px]" aria-hidden="true">▪</span><span>[Modélisation des triangles de suspension]</span></li>
+                            <li class="flex gap-3"><span class="text-accent mt-[2px]" aria-hidden="true">▪</span><span>[Intégration de la suspension et de la jante]</span></li>
+                            <li class="flex gap-3"><span class="text-accent mt-[2px]" aria-hidden="true">▪</span><span>[Conception du bol de disque, disque AP Racing CP2407]</span></li>
+                            <li class="flex gap-3"><span class="text-accent mt-[2px]" aria-hidden="true">▪</span><span>[Assemblage et vérification des interférences]</span></li>
+                        </ul>
+                        <p class="mt-6 text-xs text-sage">CAO, 3DExperience, liaison au sol, freinage</p>
+                    </div>
+                    <div class="group">
+                        <div class="w-full aspect-[4/3] img-placeholder rounded-sm overflow-hidden">[Rendu CAO du quart avant]</div>
+                        <p class="mt-3 text-xs text-neutral-500">Rendu CAO du quart avant</p>
+                    </div>
+                </div>
+            </article>
+            <!-- Pour développer la page, ajoute ici des blocs (missions, schémas, bilan) sur le modèle de la page stage-mcc.html -->
+
+            <!-- Navigation entre expériences -->
+            <nav aria-label="Navigation entre expériences" class="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 border-y border-neutral-800">
+                <a href="hyce.html" class="group py-6 md:py-8 md:pr-8 border-b md:border-b-0 md:border-r border-neutral-800">
+                    <div class="text-xs text-neutral-500">Précédent</div>
+                    <div class="mt-2 font-serif italic text-3xl md:text-4xl text-ink group-hover:text-accent transition">Projet HYCE</div>
+                </a>
+                <a href="index.html" class="group py-6 md:py-8 md:pl-8 md:text-right">
+                    <div class="text-xs text-neutral-500">Suivant</div>
+                    <div class="mt-2 font-serif italic text-3xl md:text-4xl text-ink group-hover:text-accent transition">Retour à l’accueil</div>
+                </a>
+            </nav>
+        </div>
+    </main>
+
+    <!-- CONTACT + CARTOUCHE (identique sur toutes les pages) -->
+    <footer id="contact" class="py-16 md:py-24 px-5 md:px-12 border-t border-ink bg-ink text-paper">
+        <div class="page-wrap flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+            <div>
+                <h2 class="font-serif italic text-5xl md:text-7xl mb-8">Écrivez-moi.</h2>
+                <div class="space-y-2">
+                    <div class="flex flex-wrap items-center gap-3"><a href="mailto:axel.plais@estaca.eu" class="text-lg md:text-xl text-paper underline decoration-accent underline-offset-4 hover:text-footaccent transition-colors break-all md:break-normal">axel.plais@estaca.eu</a><button type="button" class="copy-mail text-xs border border-paper/[.22] px-2.5 py-1.5 hover:text-footaccent transition" data-copy="axel.plais@estaca.eu" aria-live="polite">Copier</button></div>
+                    <a href="tel:+33768768745" class="block text-lg md:text-xl text-paper hover:text-footaccent transition-colors">07 68 76 87 45</a>
+                </div>
+            </div>
+            <div class="flex flex-row flex-wrap md:flex-col md:flex-nowrap items-start md:items-end gap-x-6 gap-y-4 text-base">
+                <a href="https://www.linkedin.com/in/axel-plais-408740374/" target="_blank" rel="noopener" class="hover:text-footaccent transition">LinkedIn<span class="sr-only"> (nouvel onglet)</span></a>
+                                <a href="pdf/CV_Axel_PLAIS.pdf" target="_blank" rel="noopener" class="text-footaccent hover:text-sage transition">Télécharger mon CV<span class="sr-only"> (PDF, 104 Ko, nouvel onglet)</span></a>
+                <button type="button" class="cv-preview hidden md:inline hover:text-footaccent transition" data-pdf="pdf/CV_Axel_PLAIS.pdf">Aperçu du CV</button>
+                <a href="#" class="haut-de-page inline-flex items-center gap-2 border border-paper/[.22] px-3 py-2 hover:text-footaccent transition" aria-label="Remonter en haut de la page"><span aria-hidden="true">↑</span> Haut de page</a>
+            </div>
+        </div>
+        <div class="page-wrap mt-16 md:mt-24 grid grid-cols-2 md:grid-cols-5 border border-paper/[.22] text-sm text-footmuted">
+            <div class="p-3 border-r border-b md:border-b-0 border-paper/[.22]"><div class="text-footmuted mb-1">Titre</div><div class="text-paper">Quart avant</div></div>
+            <div class="p-3 border-b md:border-b-0 md:border-r border-paper/[.22]"><div class="text-footmuted mb-1">Auteur</div><div class="text-paper">A. Plais</div></div>
+            <div class="p-3 border-r border-b md:border-b-0 border-paper/[.22]"><div class="text-footmuted mb-1">Échelle</div><div class="text-paper">1:1</div></div>
+            <div class="p-3 border-b md:border-b-0 md:border-r border-paper/[.22]"><div class="text-footmuted mb-1">Rév.</div><div class="text-paper">2026.11</div></div>
+            <div class="p-3 col-span-2 md:col-span-1"><div class="text-footmuted mb-1">Droits</div><div class="text-paper">© 2026 Axel Plais</div></div>
+        </div>
+    </footer>
+
+    <script src="assets/menu.js" defer></script>
+    <script src="assets/animations.js" defer></script>
+</body>
+</html>

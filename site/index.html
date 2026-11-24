@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axel Plais, élève-ingénieur automobile à l’ESTACA</title>
+    <meta name="description" content="Portfolio d’Axel Plais, élève-ingénieur en filière automobile à l’ESTACA : stage chez Méhari Club Cassis, projet HYCE à hydrogène, projets d’école.">
+    <link rel="canonical" href="https://SITE-A-REMPLACER.netlify.app/">
+    <meta name="theme-color" content="#F3EEE6">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Axel Plais, portfolio">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Axel Plais, élève-ingénieur automobile">
+    <meta property="og:description" content="Portfolio d’Axel Plais, élève-ingénieur en filière automobile à l’ESTACA : stage chez Méhari Club Cassis, projet HYCE à hydrogène, projets d’école.">
+    <meta property="og:url" content="https://SITE-A-REMPLACER.netlify.app/">
+    <meta property="og:image" content="https://SITE-A-REMPLACER.netlify.app/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Axel Plais, élève-ingénieur automobile à l’ESTACA">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preload" href="assets/fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/tailwind.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"Axel Plais","jobTitle":"Élève-ingénieur, filière automobile","alumniOf":{"@type":"CollegeOrUniversity","name":"ESTACA"},"email":"mailto:axel.plais@estaca.eu","url":"https://SITE-A-REMPLACER.netlify.app/","image":"https://SITE-A-REMPLACER.netlify.app/img/perso/photo_axel.jpg","sameAs":["https://www.linkedin.com/in/axel-plais-408740374/"]}
+    </script>
+    <script>document.documentElement.classList.add('js-enabled')</script>
+</head>
+<body class="selection:bg-accent selection:text-paper">
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <a href="#contenu" class="skip-link">Aller au contenu</a>
+
+    <!-- EN-TÊTE -->
+    <header id="site-header" class="fixed top-0 w-full z-40 py-6 md:py-8 px-5 md:px-12 flex justify-between items-center">
+        <a href="#contenu" class="header-id block">
+            <div class="text-base font-semibold mb-1">Axel Plais</div>
+            <div class="text-xs text-neutral-500 pr-14 md:pr-0">3<sup>e</sup> année ESTACA, filière automobile</div>
+        </a>
+        <nav aria-label="Navigation principale" class="nav-pill hidden md:flex text-xs text-neutral-400">
+            <span class="nav-indicator" aria-hidden="true"></span>
+            <a href="#accueil" class="nav-link">Accueil</a>
+            <a href="#about" class="nav-link">Profil</a>
+            <a href="#experiences" class="nav-link">Parcours</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <a href="pdf/CV_Axel_PLAIS.pdf" target="_blank" rel="noopener" class="header-cv hidden md:inline-flex items-center gap-2 text-xs text-ink border border-ink/70 rounded-full px-4 py-2 hover:bg-ink hover:text-paper transition-colors">CV <span aria-hidden="true">↓</span><span class="sr-only"> (PDF, nouvel onglet)</span></a>
+    </header>
+
+    <!-- MENU MOBILE -->
+    <button id="menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden fixed top-5 right-5 z-[60] w-11 h-11 rounded-full bg-ink text-paper flex flex-col items-center justify-center gap-[5px] shadow-md">
+        <span class="block w-5 h-[1.5px] bg-paper transition"></span>
+        <span class="block w-5 h-[1.5px] bg-paper transition"></span>
+    </button>
+    <nav id="mobile-menu" aria-label="Menu mobile" inert class="md:hidden fixed inset-0 z-50 bg-paper px-6 pt-28 pb-10 flex flex-col opacity-0 pointer-events-none transition-opacity duration-300">
+        <a href="#accueil" class="flex items-baseline gap-4 py-4 border-b border-neutral-800"><span class="font-mono text-xs text-accent w-8">00</span><span class="font-serif italic text-4xl text-ink">Accueil</span></a>
+        <a href="#about" class="flex items-baseline gap-4 py-4 border-b border-neutral-800"><span class="font-mono text-xs text-accent w-8">01</span><span class="font-serif italic text-4xl text-ink">Profil</span></a>
+        <a href="#experiences" class="flex items-baseline gap-4 py-4 border-b border-neutral-800"><span class="font-mono text-xs text-accent w-8">02</span><span class="font-serif italic text-4xl text-ink">Parcours</span></a>
+        <a href="#contact" class="flex items-baseline gap-4 py-4 border-b border-neutral-800"><span class="font-mono text-xs text-accent w-8">03</span><span class="font-serif italic text-4xl text-ink">Contact</span></a>
+        <p class="mt-auto text-xs text-neutral-500">Axel Plais, portfolio 2026</p>
+    </nav>
+
+    <main id="contenu" tabindex="-1">
+        <!-- ACCUEIL : nom, statut, photo, citation, puis le sommaire -->
+        <section id="accueil" class="px-5 md:px-12 pt-28 md:pt-36 pb-12 md:pb-16">
+            <div class="page-wrap w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+                    <div class="lg:col-span-8">
+                        <p class="font-mono text-xs text-accent mb-6 flex items-center gap-2.5"><span class="pulse-dot" aria-hidden="true"></span>Portfolio 2026</p>
+                        <h1 class="font-serif italic text-[18vw] md:text-[10vw] lg:text-[9vw] leading-[.9] text-ink"><span class="blur-word" style="--i:0">Axel</span> <span class="blur-word" style="--i:1">Plais</span></h1>
+                        <p class="blur-words mt-6 text-xl md:text-2xl font-light text-ink max-w-xl leading-snug">Élève-ingénieur en 3<sup>e</sup> année à l’ESTACA, filière automobile.</p>
+                        <p class="blur-late mt-3 text-base md:text-lg text-neutral-500 flex flex-wrap items-baseline gap-x-2">Ce qui me motive :
+                            <span class="sr-only">la mobilité durable, la motorisation et la gestion de projet.</span>
+                            <span class="rotator" aria-hidden="true"><span class="is-on">la mobilité durable</span><span>la motorisation</span><span>la gestion de projet</span></span>
+                        </p>
+                        <figure data-reveal data-delay="420" class="mt-10 max-w-xl border-l-2 border-accent pl-5">
+                            <blockquote class="font-serif italic text-2xl md:text-3xl leading-snug text-ink">« Nous n’héritons pas de la terre de nos ancêtres, nous l’empruntons à nos enfants. »</blockquote>
+                            <figcaption class="mt-3 text-xs text-neutral-500">Proverbe souvent attribué à Antoine de Saint-Exupéry</figcaption>
+                        </figure>
+                        <div data-reveal data-delay="540" class="mt-10 flex flex-wrap gap-3">
+                            <a href="#about" class="inline-flex items-center px-5 py-3 bg-accent text-paper text-sm font-medium rounded-sm hover:bg-ink transition-colors btn-modern">Découvrir mon profil <span class="btn-arrow ml-2" aria-hidden="true">→</span></a>
+                            <a href="pdf/CV_Axel_PLAIS.pdf" target="_blank" rel="noopener" class="inline-flex items-center px-5 py-3 border border-ink text-ink text-sm rounded-sm hover:bg-ink hover:text-paper transition-colors btn-modern">Télécharger mon CV<span class="sr-only"> (PDF, 104 Ko, nouvel onglet)</span></a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-4 w-full max-w-xs sm:max-w-sm mx-auto lg:max-w-none">
+                        <div class="flex items-center gap-2 mb-5 text-xs text-neutral-500">
+                            <span class="w-px h-3 bg-neutral-500"></span><span class="flex-1 h-px bg-neutral-500"></span>
+                            <span>Éch. 1:1</span>
+                            <span class="flex-1 h-px bg-neutral-500"></span><span class="w-px h-3 bg-neutral-500"></span>
+                        </div>
+                        <div data-reveal="scale" data-delay="200" class="relative border border-neutral-500 p-2.5 bg-paper">
+                            <div class="photo-frame relative overflow-hidden aspect-[4/5]">
+                                <picture><source srcset="img/perso/photo_axel.avif" type="image/avif"><source srcset="img/perso/photo_axel.webp" type="image/webp"><img width="800" height="1000" fetchpriority="high" decoding="async" src="img/perso/photo_axel.jpg" alt="Portrait d’Axel Plais" class="w-full h-full object-cover"></picture>
+                            </div>
+                        </div>
+                        <p class="mt-3 text-xs text-neutral-500">Portrait, Laval, 2026</p>
+                    </div>
+                </div>
+
+                <nav id="sommaire" aria-label="Sommaire" class="mt-16 md:mt-24">
+                    <ol class="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-8">
+                        <li data-reveal><a href="#about" class="sommaire-link group block border-t-2 border-ink pt-4 pb-6 hover:text-accent transition-colors"><span class="font-mono text-xs text-accent">01</span><span class="sommaire-arrow" aria-hidden="true">↗</span><span class="block mt-1 font-serif italic text-3xl md:text-4xl text-ink group-hover:text-accent transition-colors">Profil</span><span class="block mt-1 text-xs text-neutral-500">Mes ambitions, mes compétences, mes langues</span></a></li>
+                        <li data-reveal data-delay="120"><a href="#experiences" class="sommaire-link group block border-t-2 border-ink pt-4 pb-6 hover:text-accent transition-colors"><span class="font-mono text-xs text-accent">02</span><span class="sommaire-arrow" aria-hidden="true">↗</span><span class="block mt-1 font-serif italic text-3xl md:text-4xl text-ink group-hover:text-accent transition-colors">Parcours</span><span class="block mt-1 text-xs text-neutral-500">De la prépa au projet HYCE et au stage</span></a></li>
+                        <li data-reveal data-delay="240"><a href="#contact" class="sommaire-link group block border-t-2 border-ink pt-4 pb-6 hover:text-accent transition-colors"><span class="font-mono text-xs text-accent">03</span><span class="sommaire-arrow" aria-hidden="true">↗</span><span class="block mt-1 font-serif italic text-3xl md:text-4xl text-ink group-hover:text-accent transition-colors">Contact</span><span class="block mt-1 text-xs text-neutral-500">Téléphone, e-mail, LinkedIn et CV</span></a></li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+
+        <!-- 01 PROFIL : la phrase, les ambitions, puis ce que j'apporte (à compléter librement) -->
+        <section id="about" class="py-16 md:py-24 px-5 md:px-12 bg-neutral-900/30 border-y border-neutral-800">
+            <div class="page-wrap">
+                <div class="flex items-center justify-between text-xs text-neutral-400 mb-10 md:mb-16">
+                    <div class="flex items-center gap-4">
+                        <span>Portfolio 2026</span>
+                        <span class="w-[2px] h-4 bg-sage"></span>
+                        <span class="text-ink">Profil</span>
+                    </div>
+                    <span class="font-mono bg-accent text-paper px-3 py-1.5">01</span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                    <h2 data-reveal class="lg:col-span-6 font-serif italic text-5xl md:text-7xl leading-[.95] text-ink">Mettre l’ingénierie au service d’une automobile plus propre.</h2>
+                    <div data-reveal data-delay="150" class="lg:col-span-5 lg:col-start-8 space-y-5 text-neutral-400 font-light leading-relaxed">
+                        <p>Le transport pèse lourd dans les émissions, et l’automobile doit changer sans perdre ce qui la rend passionnante : la mécanique, la course, le plaisir de conduire. C’est ce défi qui m’a conduit à l’ESTACA, puis au projet HYCE, où l’on fait rouler un moteur thermique à l’hydrogène.</p>
+                        <p>Demain, je veux travailler sur les motorisations à faibles émissions, de la conception jusqu’aux essais, au sein d’une équipe qui fait avancer le secteur.</p>
+                    </div>
+                </div>
+
+                <h3 class="mt-16 md:mt-24 mb-8 font-serif italic text-3xl md:text-4xl text-ink">Ce que j’apporte</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
+                    <div data-reveal class="border-t border-ink pt-4">
+                        <h4 class="text-xs font-medium text-accent mb-3">Compétences techniques</h4>
+                        <ul class="space-y-2 text-sm text-neutral-400 leading-snug">
+                            <li>Étude et dimensionnement d’un système d’injection hydrogène</li>
+                            <li>Préparation d’un moteur en vue d’un rétrofit</li>
+                            <li>Montage de sous-ensembles mécaniques selon une gamme</li>
+                            <li>Conception assistée par ordinateur</li>
+                        </ul>
+                    </div>
+                    <div data-reveal data-delay="90" class="border-t border-ink pt-4">
+                        <h4 class="text-xs font-medium text-accent mb-3">Qualités</h4>
+                        <ul class="space-y-2 text-sm text-neutral-400 leading-snug">
+                            <li>Travail en équipe, communication, répartition des tâches</li>
+                            <li>Rigueur</li>
+                            <li>Créativité</li>
+                            <li>Adaptabilité</li>
+                        </ul>
+                    </div>
+                    <div data-reveal data-delay="180" class="border-t border-ink pt-4">
+                        <h4 class="text-xs font-medium text-accent mb-3">Logiciels</h4>
+                        <ul class="space-y-2 text-sm text-neutral-400 leading-snug">
+                            <li>Solidworks</li>
+                            <li>Matlab, Simulink</li>
+                            <li>Lotus Engineering</li>
+                            <li>3DExperience, Pack Office</li>
+                        </ul>
+                    </div>
+                    <div data-reveal data-delay="270" class="border-t border-ink pt-4">
+                        <h4 class="text-xs font-medium text-accent mb-3">Langues</h4>
+                        <ul class="space-y-2 text-sm text-neutral-400 leading-snug">
+                            <li>Français, langue maternelle</li>
+                            <li>Anglais, B2</li>
+                            <li>Espagnol, A2</li>
+                        </ul>
+                    </div>
+                    <div data-reveal data-delay="360" class="border-t border-ink pt-4 sm:col-span-2">
+                        <h4 class="text-xs font-medium text-accent mb-3">Centres d’intérêt</h4>
+                        <ul class="space-y-2 text-sm text-neutral-400 leading-snug">
+                            <li>Badminton en club depuis 8 ans</li>
+                            <li>Sport mécanique : suivi des compétitions, présence sur circuit</li>
+                            <li>Sciences, innovation, actualité</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 PARCOURS : la frise, de la prépa aux projets -->
+        <section id="experiences" class="py-16 md:py-24 px-5 md:px-12">
+            <div class="page-wrap">
+                <div class="flex items-center justify-between text-xs text-neutral-400 mb-10 md:mb-16">
+                    <div class="flex items-center gap-4">
+                        <span>Portfolio 2026</span>
+                        <span class="w-[2px] h-4 bg-sage"></span>
+                        <span class="text-ink">Parcours</span>
+                    </div>
+                    <span class="font-mono bg-accent text-paper px-3 py-1.5">02</span>
+                </div>
+                <h2 data-reveal class="font-serif italic text-5xl md:text-7xl leading-[.95] text-ink mb-12 md:mb-16">Des études au métier d’ingénieur</h2>
+
+                <ol class="frise">
+                    <!-- Prépa -->
+                    <li data-reveal="left" class="etape">
+                        <div class="etape-quand"><span class="font-mono text-sm text-ink">2024 à 2025</span><span class="text-xs text-neutral-500">Marseille</span></div>
+                        <div class="etape-corps">
+                            <h3 class="text-xl md:text-2xl font-medium text-ink">Classe préparatoire PCSI</h3>
+                            <p class="mt-1 text-xs text-neutral-500">Lycée Jean Perrin</p>
+                            <p class="mt-4 text-neutral-400 font-light leading-relaxed max-w-2xl">Une année intense de mathématiques, de physique et de sciences de l’ingénieur, qui m’a donné une base scientifique solide et une vraie rigueur de travail.</p>
+                            <p class="mt-3 text-sm font-medium text-ink">Classé 7<sup>e</sup> sur 58 au premier semestre, 11<sup>e</sup> sur 58 au second.</p>
+                        </div>
+                    </li>
+
+                    <!-- ESTACA -->
+                    <li data-reveal="left" class="etape">
+                        <div class="etape-quand"><span class="font-mono text-sm text-ink">2025 à 2029</span><span class="text-xs text-neutral-500">Laval</span></div>
+                        <div class="etape-corps">
+                            <h3 class="text-xl md:text-2xl font-medium text-ink">ESTACA, cycle ingénieur</h3>
+                            <p class="mt-1 text-xs text-neutral-500">École d’ingénieurs spécialisée dans les transports, filière automobile</p>
+                            <p class="mt-4 text-neutral-400 font-light leading-relaxed max-w-2xl">L’école prolonge cette formation scientifique et m’ouvre trois portes, détaillées plus bas :</p>
+                            <ul class="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <li><a href="#exp-hyce" class="block border border-neutral-500/60 bg-paper p-4 card-lift hover:border-accent transition-colors"><span class="block text-xs text-neutral-500">S’investir dans une association</span><span class="block mt-1 text-sm font-medium text-accent">Le projet HYCE</span></a></li>
+                                <li><a href="#exp-stage" class="block border border-neutral-500/60 bg-paper p-4 card-lift hover:border-accent transition-colors"><span class="block text-xs text-neutral-500">Décrocher des stages</span><span class="block mt-1 text-sm font-medium text-accent">Méhari Club Cassis</span></a></li>
+                                <li><a href="#exp-ecole" class="block border border-neutral-500/60 bg-paper p-4 card-lift hover:border-accent transition-colors"><span class="block text-xs text-neutral-500">Mener des projets</span><span class="block mt-1 text-sm font-medium text-accent">Projets d’école</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- HYCE moteur -->
+                    <li data-reveal="left" class="etape etape--forte" id="exp-hyce">
+                        <div class="etape-quand"><span class="font-mono text-sm text-ink">Fév. 2025</span><span class="text-xs text-neutral-500">à aujourd’hui</span></div>
+                        <div class="etape-corps grid grid-cols-1 lg:grid-cols-12 gap-8">
+                            <div class="lg:col-span-7">
+                                <h3 class="font-serif italic text-4xl md:text-5xl leading-none text-ink">Projet HYCE, pôle moteur</h3>
+                                <p class="mt-5 text-neutral-400 font-light leading-relaxed">HYCE réunit une trentaine d’étudiants de l’ESTACA qui rétrofitent une voiture de course vers un moteur thermique à hydrogène, pour démocratiser cette technologie par le sport automobile.</p>
+                                <ul class="taches mt-5 space-y-2 text-sm text-neutral-400">
+                                    <li>Comparaison des modes d’injection et choix de l’injection indirecte</li>
+                                    <li>Calcul du débit requis et sélection des injecteurs</li>
+                                    <li>Pilotage de l’injection par le calculateur</li>
+                                    <li>Préparation du moteur Renault MR18 pour sa conversion</li>
+                                </ul>
+                                <p class="mt-5 border-l-2 border-accent pl-3 text-sm font-medium text-ink">Prix Coup de Cœur du Jury, finale SIA Powertrain.</p>
+                                <div class="mt-6 flex flex-wrap items-center gap-5">
+                                    <a href="hyce.html" class="inline-flex items-center border border-ink px-4 py-3 text-xs text-ink hover:bg-ink hover:text-paper transition btn-modern">Découvrir HYCE <span class="btn-arrow ml-2" aria-hidden="true">→</span></a>
+                                    <a href="hyce.html#exp-moteur" class="text-xs text-accent underline underline-offset-4 hover:text-ink transition">Le pôle moteur en détail</a>
+                                </div>
+                            </div>
+                            <div class="lg:col-span-5">
+                                <div class="w-full aspect-[4/3] img-placeholder rounded-sm">Photo de la voiture HYCE à venir</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- HYCE sponsoring -->
+                    <li data-reveal="left" class="etape">
+                        <div class="etape-quand"><span class="font-mono text-sm text-ink">Oct. 2025</span><span class="text-xs text-neutral-500">à aujourd’hui</span></div>
+                        <div class="etape-corps">
+                            <h3 class="text-xl md:text-2xl font-medium text-ink">Projet HYCE, pôle sponsoring</h3>
+                            <p class="mt-1 text-xs text-neutral-500">Membre d’octobre 2025 à juillet 2026, responsable du pôle depuis août 2026</p>
+                            <ul class="taches mt-4 space-y-2 text-sm text-neutral-400">
+                                <li>Stratégie de sponsoring et pilotage de la prospection</li>
+                                <li>Coordination de l’équipe du pôle</li>
+                                <li>Négociation des partenariats financiers et techniques</li>
+                                <li>Inscription aux concours étudiants</li>
+                            </ul>
+                            <a href="hyce.html#exp-sponso" class="mt-5 inline-block text-xs text-accent underline underline-offset-4 hover:text-ink transition">Le pôle sponsoring en détail</a>
+                        </div>
+                    </li>
+
+                    <!-- Stage MCC -->
+                    <li data-reveal="left" class="etape etape--forte" id="exp-stage">
+                        <div class="etape-quand"><span class="font-mono text-sm text-ink">Juil. 2026</span><span class="text-xs text-neutral-500">Cassis, 4 semaines</span></div>
+                        <div class="etape-corps grid grid-cols-1 lg:grid-cols-12 gap-8">
+                            <div class="lg:col-span-7">
+                                <h3 class="font-serif italic text-4xl md:text-5xl leading-none text-ink">Stage d’exécution, Méhari Club Cassis</h3>
+                                <p class="mt-5 text-neutral-400 font-light leading-relaxed">Un mois sur la ligne de montage de MCC Automotive, qui refabrique des Méhari et des 2CV avec les outillages d’origine Citroën.</p>
+                                <ul class="taches mt-5 space-y-2 text-sm text-neutral-400">
+                                    <li>Montage de la base des véhicules, partie thermique et châssis, sur Méhari et sur le modèle Eden</li>
+                                    <li>Assemblage des sous-ensembles en suivant la gamme de montage</li>
+                                    <li>Travail en binôme avec un technicien, avec des exigences de qualité et de cadence</li>
+                                </ul>
+                                <div class="mt-6"><a href="stage-mcc.html" class="inline-flex items-center border border-ink px-4 py-3 text-xs text-ink hover:bg-ink hover:text-paper transition btn-modern">Découvrir le stage <span class="btn-arrow ml-2" aria-hidden="true">→</span></a></div>
+                            </div>
+                            <a href="stage-mcc.html" class="group lg:col-span-5 block" aria-label="Découvrir le stage">
+                                <div class="photo-zoom overflow-hidden rounded-sm"><picture><source srcset="img/mcc/mehari.avif" type="image/avif"><source srcset="img/mcc/mehari.webp" type="image/webp"><img width="631" height="512" loading="lazy" decoding="async" src="img/mcc/mehari.jpg" alt="Méhari blanche à capote jaune, refabriquée par MCC" class="mcc-photo w-full aspect-[4/3] object-cover"></picture></div>
+                                <p class="mt-3 text-xs text-neutral-500">Méhari assemblée à Cassis</p>
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- Projets d'école -->
+                    <li data-reveal="left" class="etape" id="exp-ecole">
+                        <div class="etape-quand"><span class="font-mono text-sm text-ink">Projets</span><span class="text-xs text-neutral-500">À l’ESTACA</span></div>
+                        <div class="etape-corps">
+                            <h3 class="text-xl md:text-2xl font-medium text-ink">Projets d’école</h3>
+                            <ul class="mt-4 border-t border-neutral-800">
+                                <li><a href="projet-quart-avant.html" class="group flex items-baseline justify-between gap-4 py-4 border-b border-neutral-800 hover:text-accent transition"><span class="font-medium text-ink group-hover:text-accent transition-colors">Quart avant de véhicule</span><span class="text-xs text-neutral-500">CAO, 3DExperience <span class="go-arrow ml-2 text-accent" aria-hidden="true">→</span></span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CONTACT + CARTOUCHE (identique sur toutes les pages) -->
+    <footer id="contact" class="py-16 md:py-24 px-5 md:px-12 border-t border-ink bg-ink text-paper">
+        <div class="page-wrap flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+            <div>
+                <h2 class="font-serif italic text-5xl md:text-7xl mb-8">Écrivez-moi.</h2>
+                <div class="space-y-2">
+                    <div class="flex flex-wrap items-center gap-3"><a href="mailto:axel.plais@estaca.eu" class="text-lg md:text-xl text-paper underline decoration-accent underline-offset-4 hover:text-footaccent transition-colors break-all md:break-normal">axel.plais@estaca.eu</a><button type="button" class="copy-mail text-xs border border-paper/[.22] px-2.5 py-1.5 hover:text-footaccent transition" data-copy="axel.plais@estaca.eu" aria-live="polite">Copier</button></div>
+                    <a href="tel:+33768768745" class="block text-lg md:text-xl text-paper hover:text-footaccent transition-colors">07 68 76 87 45</a>
+                </div>
+            </div>
+            <div class="flex flex-row flex-wrap md:flex-col md:flex-nowrap items-start md:items-end gap-x-6 gap-y-4 text-base">
+                <a href="https://www.linkedin.com/in/axel-plais-408740374/" target="_blank" rel="noopener" class="hover:text-footaccent transition">LinkedIn<span class="sr-only"> (nouvel onglet)</span></a>
+                
+                <a href="pdf/CV_Axel_PLAIS.pdf" target="_blank" rel="noopener" class="text-footaccent hover:text-sage transition">Télécharger mon CV<span class="sr-only"> (PDF, 104 Ko, nouvel onglet)</span></a>
+                <button type="button" class="cv-preview hidden md:inline hover:text-footaccent transition" data-pdf="pdf/CV_Axel_PLAIS.pdf">Aperçu du CV</button>
+                <a href="#" class="haut-de-page inline-flex items-center gap-2 border border-paper/[.22] px-3 py-2 hover:text-footaccent transition" aria-label="Remonter en haut de la page"><span aria-hidden="true">↑</span> Haut de page</a>
+            </div>
+        </div>
+        <div class="page-wrap mt-16 md:mt-24 grid grid-cols-2 md:grid-cols-5 border border-paper/[.22] text-sm text-footmuted">
+            <div class="p-3 border-r border-b md:border-b-0 border-paper/[.22]"><div class="text-footmuted mb-1">Titre</div><div class="text-paper">Portfolio</div></div>
+            <div class="p-3 border-b md:border-b-0 md:border-r border-paper/[.22]"><div class="text-footmuted mb-1">Auteur</div><div class="text-paper">A. PLAIS</div></div>
+            <div class="p-3 border-r border-b md:border-b-0 border-paper/[.22]"><div class="text-footmuted mb-1">Échelle</div><div class="text-paper">1:1</div></div>
+            <div class="p-3 border-b md:border-b-0 md:border-r border-paper/[.22]"><div class="text-footmuted mb-1">Rév.</div><div class="text-paper">2026.11</div></div>
+            <div class="p-3 col-span-2 md:col-span-1"><div class="text-footmuted mb-1">Droits</div><div class="text-paper">© 2026 Axel Plais</div></div>
+        </div>
+    </footer>
+
+    <script src="assets/menu.js" defer></script>
+    <script src="assets/animations.js" defer></script>
+</body>
+</html>
