@@ -14,5 +14,6 @@
 /img/*
   Cache-Control: public, max-age=604800
 
+# PDF : le navigateur revérifie à chaque fois, pour qu'un CV remplacé soit visible tout de suite
 /pdf/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=0, must-revalidate

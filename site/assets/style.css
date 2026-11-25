@@ -222,9 +222,6 @@ footer#contact {
 #site-header.is-scrolled { padding-top: .9rem; padding-bottom: .9rem; }
 html { scroll-padding-top: 5.5rem; }
 
-/* Pastille pulsante à côté de « Portfolio 2026 » */
-.pulse-dot { position: relative; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
-.pulse-dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--accent); opacity: .5; }
 
 /* Sommaire : ligne qui se dessine + flèche ↗ */
 .sommaire-link { position: relative; }
@@ -275,8 +272,6 @@ html { scroll-padding-top: 5.5rem; }
     .js-enabled [data-reveal="left"] { transform: translateX(-28px); }
     .js-enabled [data-reveal="scale"] { transform: scale(.96); }
     .js-enabled [data-reveal].is-visible { opacity: 1; transform: none; }
-    .pulse-dot::after { animation: pulse 2.4s ease-out infinite; }
-    @keyframes pulse { 0% { transform: scale(1); opacity: .5; } 80%, 100% { transform: scale(2.8); opacity: 0; } }
 }
 
 /* ===== Aperçu 24/11 : menu pilule, titre flou =====
